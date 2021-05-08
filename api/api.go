@@ -9,9 +9,9 @@ func RunApi() *gin.Engine {
 }
 
 func RunApiOnRouter(r *gin.Engine) {
-	cacheQueryGroup := r.Group("/api/simple")
+	apiGroup := r.Group("/api/simple")
 	{
-		cacheQueryGroup.GET("get-time", GetTime)
-		cacheQueryGroup.POST("echo", Echo)
+		apiGroup.GET("get-time", GetTime)
+		apiGroup.POST("echo", Echo)
 	}
 }
